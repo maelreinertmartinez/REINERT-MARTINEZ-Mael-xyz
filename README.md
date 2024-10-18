@@ -1,4 +1,4 @@
-# XYZ
+# XYZ REINERT MARTINEZ Maël
 
 <img src="docs/screenshots/home.png" alt="Page d'accueil" />
 
