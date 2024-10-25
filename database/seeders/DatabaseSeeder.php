@@ -16,11 +16,14 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         // Create weeks
-        $this->call(WeekSeeder::class);
+        $this->call([
+            WeekSeeder::class,
+            CategorySeeder::class,
+        ]);
 
         // Create content
         User::factory()
-            ->count(15)
+            ->count(100)
             ->has(
                 Track::factory(config('app.tracks_per_week'))
                     ->state(new Sequence(fn () => ['week_id' => rand(2, 7)]))
